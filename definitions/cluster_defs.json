@@ -1,4 +1,9 @@
 {
+	"zeaker": {
+        "attrId":{
+            "voice":{"id":0,"type":"uint16"}},
+        "cmd":{"speak":0},
+        "cmdRsp":null},
     "genBasic": {
         "attrId":{
             "zclVersion":{"id":0,"type":"uint8"},
