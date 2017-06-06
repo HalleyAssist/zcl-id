@@ -93,7 +93,12 @@ zclId.device = function (profId, devId) {
     profItem = zclId.profileId.get(profId);
 
     if (profItem)
-        devItem = zclId.deviceId[profItem.key].get(devId);
+        devItem = zclId.deviceId[profItem.key];
+	
+	if(!devItem)
+		return;
+	
+	devItem = devItem.get(devId);
 
     if (devItem)
         return { key: devItem.key, value: devItem.value };      // { key: 'ON_OFF_SWITCH', value: 0 }
