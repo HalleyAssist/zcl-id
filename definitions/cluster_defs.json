@@ -316,8 +316,9 @@
             "imageTypeId":{"id":8,"type":"uint16"},
             "minimumBlockReqDelay":{"id":9,"type":"uint16"},
             "imageStamp":{"id":10,"type":"uint32"}},
-        "cmd":{"queryNextImageReq":1,"imageBlockReq":3,"imagePageReq":4,"upgradeEndReq":6,"querySpecificFileReq":8},
-        "cmdRsp":{"imageNotify":0,"queryNextImageRsp":2,"imageBlockRsp":5,"upgradeEndRsp":7,"querySpecificFileRsp":9}},
+        "cmd":{"imageNotify":0,"queryNextImageReq":1,"queryNextImageRsp":2,"imageBlockReq":3,"imagePageReq":4,"imageBlockRsp":5,"upgradeEndReq":6,"upgradeEndRsp":7,"querySpecificFileReq":8,"querySpecificFileRsp":9},
+        "cmdRsp":{"imageNotify":0,"queryNextImageReq":1,"queryNextImageRsp":2,"imageBlockReq":3,"imagePageReq":4,"imageBlockRsp":5,"upgradeEndReq":6,"upgradeEndRsp":7,"querySpecificFileReq":8,"querySpecificFileRsp":9}
+    },
     "genPollCtrl": {
         "attrId":{
             "checkinInterval":{"id":0,"type":"uint32"},
