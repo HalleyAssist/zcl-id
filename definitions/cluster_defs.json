@@ -316,8 +316,8 @@
             "imageTypeId":{"id":8,"type":"uint16"},
             "minimumBlockReqDelay":{"id":9,"type":"uint16"},
             "imageStamp":{"id":10,"type":"uint32"}},
-        "cmd":{"imageNotify":0,"queryNextImageReq":1,"queryNextImageRsp":2,"imageBlockReq":3,"imagePageReq":4,"imageBlockRsp":5,"upgradeEndReq":6,"upgradeEndRsp":7,"querySpecificFileReq":8,"querySpecificFileRsp":9},
-        "cmdRsp":{"imageNotify":0,"queryNextImageReq":1,"queryNextImageRsp":2,"imageBlockReq":3,"imagePageReq":4,"imageBlockRsp":5,"upgradeEndReq":6,"upgradeEndRsp":7,"querySpecificFileReq":8,"querySpecificFileRsp":9}
+        "cmd":{"imageNotify":0,"queryNextImageReq":1,"queryNextImageRsp":2,"imageBlockReq":3,"imagePageReq":4,"imageBlockRspSuccess":5,"imageBlockRspAbort":5,"upgradeEndReq":6,"upgradeEndRsp":7,"querySpecificFileReq":8,"querySpecificFileRsp":9},
+        "cmdRsp":{"imageNotify":0,"queryNextImageReq":1,"queryNextImageRsp":2,"imageBlockReq":3,"imagePageReq":4,"imageBlockRspSuccess":5,"imageBlockRspAbort":5,"upgradeEndReq":6,"upgradeEndRsp":7,"querySpecificFileReq":8,"querySpecificFileRsp":9}
     },
     "genPollCtrl": {
         "attrId":{
