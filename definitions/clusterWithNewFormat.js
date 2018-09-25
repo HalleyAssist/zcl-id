@@ -9,8 +9,8 @@ function clusterWithNewFormat (cluster) {
         cmdRsp: null
     }
 
-    cObj.attr = new Enum(cluster.attrId, function(a){a.id});
-    cObj.attrType = new Enum(cluster.attrId, function(a){a.type}, false);
+    cObj.attr = new Enum(cluster.attrId, function(a){return a.id});
+    cObj.attrType = new Enum(cluster.attrId, function(a){return a.type}, false);
 
     if (cluster.cmd !== null)
         cObj.cmd = new Enum(cluster.cmd);
