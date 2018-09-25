@@ -7,18 +7,10 @@ function clusterWithNewFormat (cluster) {
         attrType: null,
         cmd: null,
         cmdRsp: null
-    };
+    }
 
-    var attrObj = {},
-        attrTypeObj = {};
-
-    _.forEach(cluster.attrId, function (attrInfo, attr) {
-        attrObj[attr] = attrInfo.id;
-        attrTypeObj[attr] = attrInfo.type;
-    });
-
-    cObj.attr = new Enum(attrObj, function(a){a.id});
-    cObj.attrType = new Enum(attrTypeObj, function(a){a.type}, false);
+    cObj.attr = new Enum(cluster.attrId, function(a){a.id});
+    cObj.attrType = new Enum(cluster.attrId, function(a){a.type}, false);
 
     if (cluster.cmd !== null)
         cObj.cmd = new Enum(cluster.cmd);
