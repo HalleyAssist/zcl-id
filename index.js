@@ -1,5 +1,5 @@
 var _ = require('busyman'),
-    Enum = require('enum');
+    Enum = require('light-enum');
 
 var _common = require('./definitions/common.json'),
     _clusterDefs = require('./definitions/cluster_defs.json'),
@@ -214,11 +214,11 @@ zclId.attrList = function (cId) {
     if (!cItem || !clst)
         return;
 
-    var attrs = _.map(clst.attr.enums, function (item) {
+    var attrs = clst.attr.enums.map(function (item) {
         return { attrId: item.value };
     });
 
-    _.forEach(attrs, function (item) {
+    attrs.forEach(function (item) {
         var type = zclId.attrType(cItem.key, item.attrId);
         item.dataType = type ? type.value : 255;
     });

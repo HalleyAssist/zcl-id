@@ -1,5 +1,5 @@
 var _ = require('busyman'),
-    Enum = require('enum');
+    Enum = require('light-enum');
 
 function clusterWithNewFormat (cluster) {
     var cObj = {
@@ -17,8 +17,8 @@ function clusterWithNewFormat (cluster) {
         attrTypeObj[attr] = attrInfo.type;
     });
 
-    cObj.attr = new Enum(attrObj);
-    cObj.attrType = new Enum(attrTypeObj);
+    cObj.attr = new Enum(attrObj, function(a){a.id});
+    cObj.attrType = new Enum(attrTypeObj, function(a){a.type}, false);
 
     if (cluster.cmd !== null)
         cObj.cmd = new Enum(cluster.cmd);
