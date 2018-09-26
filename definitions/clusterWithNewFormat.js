@@ -1,5 +1,4 @@
-var _ = require('busyman'),
-    Enum = require('light-enum');
+var Enum = require('light-enum');
 
 function clusterWithNewFormat (cluster) {
     var cObj = {
