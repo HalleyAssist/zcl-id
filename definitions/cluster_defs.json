@@ -327,8 +327,7 @@
             "fastPollTimeout":{"id":3,"type":"uint16"},
             "checkinIntervalMin":{"id":4,"type":"uint32"},
             "longPollIntervalMin":{"id":5,"type":"uint32"},
-            "fastPollTimeoutMax":{"id":6,"type":"uint16"},
-            "physicalClosedLimit":{"id":0,"type":"uint16"}},
+            "fastPollTimeoutMax":{"id":6,"type":"uint16"}},
         "cmd":{"checkinRsp":0,"fastPollStop":1,"setLongPollInterval":2,"setShortPollInterval":3},
         "cmdRsp":{"checkin":0}},
     "closuresShadeCfg": {
