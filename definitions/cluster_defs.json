@@ -2,7 +2,7 @@
 	"zeaker": {
         "attrId":{
             "voice":{"id":0,"type":"uint16"}},
-        "cmd":{"speak":0,"addSpeakPart":1,"speakId":2},
+        "cmd":{"speak":0,"addSpeakPart":1,"speakId":2,"prepareId":3},
         "cmdRsp":null},
     "genBasic": {
         "attrId":{
