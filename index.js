@@ -20,6 +20,7 @@ Object.defineProperty(zclId, 'statusId', _.assign({ value: new Enum(_common.stat
 Object.defineProperty(zclId, 'otaStatusId', _.assign({ value: new Enum(_common.otaStatus) }, propUnwritable));
 Object.defineProperty(zclId, 'clusterId', _.assign({ value: new Enum(_common.clusterId) }, propUnwritable));
 Object.defineProperty(zclId, 'deviceId', _.assign({ value: { HA: new Enum(_common.haDevId) } }, propUnwritable));
+Object.defineProperty(zclId, 'nwkDbType', _.assign({ value: new Enum(_common.nwkDbType) }, propUnwritable));
 
 function isValidArgType(param) {
     var isValid = true;
