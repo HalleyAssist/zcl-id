@@ -1244,5 +1244,14 @@
             "lastMessageLqi":{"id":284,"type":"uint8"},
             "lastMessageRssi":{"id":285,"type":"int8"}},
         "cmd":null,
-        "cmdRsp":null}
+        "cmdRsp":null},
+    "manuSpecificPhilips": {
+        "attrId":{
+            "config": {"id":49,"type":"uint16"}
+        },
+        "cmd":null,
+        "cmdRsp": {
+            "hueNotification": 0
+        }
+    }
 }

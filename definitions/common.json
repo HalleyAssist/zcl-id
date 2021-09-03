@@ -191,6 +191,7 @@
         "haElectricalMeasurement": 2820,
         "haDiagnostic": 2821,
         "lightLink": 4096,
+        "manuSpecificPhilips": 64512,
         "manuSpecificCluster": 65535
     },
     "dataType": {
