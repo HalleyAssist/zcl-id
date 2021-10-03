@@ -1,9 +1,23 @@
 {
-	"zeaker": {
+    "zeaker": {
         "attrId":{
-            "voice":{"id":0,"type":"uint16"}},
+            "voice":{"id":0,"type":"uint16"}
+        },
         "cmd":{"speak":0,"addSpeakPart":1,"speakId":2,"prepareId":3},
-        "cmdRsp":null},
+        "cmdRsp":null
+    },
+    "develCoAcceleration": {
+        "attrId":{
+            "measuredValueX":{"id":0,"type":"int16"},
+            "measuredValueY":{"id":1,"type":"int16"},
+            "measuredValueZ":{"id":2,"type":"int16"},
+            "minMeasuredValueXYZ":{"id":3,"type":"int16"},
+            "maxMeasuredValueXYZ":{"id":4,"type":"int16"},
+            "resolutionXYZ":{"id":5,"type":"uint16"},
+        },
+        "cmd":null,
+        "cmdRsp":null
+    },
     "genBasic": {
         "attrId":{
             "zclVersion":{"id":0,"type":"uint8"},
