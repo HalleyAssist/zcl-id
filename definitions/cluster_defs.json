@@ -18,6 +18,25 @@
         "cmd":null,
         "cmdRsp":null
     },
+    "heimanAirQuality": {
+        "attrId":{
+            "language": {"id": 61440, "type": "uint8"},
+            "unitOfMeasure": {"id": 61441, "type": "uint8"},
+            "batteryState": {"id": 61442, "type": "uint8"},
+            "pm10measuredValue": {"id": 61443, "type": "uint16"},
+            "tvocMeasuredValue": {"id": 61444, "type": "uint16"},
+            "aqiMeasuredValue": {"id": 61445, "type": "uint16"},
+            "temperatureMeasuredMax": {"id": 61446, "type": "int16"},
+            "temperatureMeasuredMin": {"id": 61447, "type": "int16"},
+            "humidityMeasuredMax": {"id": 61448, "type": "uint16"},
+            "humidityMeasuredMin": {"id": 61449, "type": "uint16"},
+            "alarmEnable": {"id": 61450, "type": "uint16"},
+            "co2MeasuredMax": {"id": 61451, "type": "uint16"},
+            "co2MeasuredMin": {"id": 61452, "type": "uint16"}
+        },
+        "cmd": { "setLanguage": 283, "setUnitOfTemperature": 284, "getTime": 285},
+        "cmdRsp": null
+    },
     "genBasic": {
         "attrId":{
             "zclVersion":{"id":0,"type":"uint8"},
@@ -672,6 +691,38 @@
             "ultrasonicOToUDelay":{"id":32,"type":"uint16"},
             "ultrasonicUToODelay":{"id":33,"type":"uint16"},
             "ultrasonicUToOThreshold":{"id":34,"type":"uint8"}},
+        "cmd":null,
+        "cmdRsp":null},
+    "msCarbonMonoxideMeasurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"singlePrec"},
+            "minMeasuredValue":{"id":1,"type":"singlePrec"},
+            "maxMeasuredValue":{"id":2,"type":"singlePrec"},
+            "tolerance":{"id":3,"type":"singlePrec"}},
+        "cmd":null,
+        "cmdRsp":null},
+    "msCarbonDioxideMeasurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"singlePrec"},
+            "minMeasuredValue":{"id":1,"type":"singlePrec"},
+            "maxMeasuredValue":{"id":2,"type":"singlePrec"},
+            "tolerance":{"id":3,"type":"singlePrec"}},
+        "cmd":null,
+        "cmdRsp":null},
+    "msPM25Measurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"singlePrec"},
+            "minMeasuredValue":{"id":1,"type":"singlePrec"},
+            "maxMeasuredValue":{"id":2,"type":"singlePrec"},
+            "tolerance":{"id":3,"type":"singlePrec"}},
+        "cmd":null,
+        "cmdRsp":null},
+    "msFormaldehydeMeasurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"singlePrec"},
+            "minMeasuredValue":{"id":1,"type":"singlePrec"},
+            "maxMeasuredValue":{"id":2,"type":"singlePrec"},
+            "tolerance":{"id":3,"type":"singlePrec"}},
         "cmd":null,
         "cmdRsp":null},
     "ssIasZone": {
