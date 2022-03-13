@@ -31,8 +31,8 @@
             "humidityMeasuredMax": {"id": 61448, "type": "uint16"},
             "humidityMeasuredMin": {"id": 61449, "type": "uint16"},
             "alarmEnable": {"id": 61450, "type": "uint16"},
-            "co2MeasuredMax": {"id": 61451, "type": "uint16"},
-            "co2MeasuredMin": {"id": 61452, "type": "uint16"}
+            "doNotDisturbStart": {"id": 61451, "type": "uint16"},
+            "doNotDisturbEnd": {"id": 61452, "type": "uint16"}
         },
         "cmd": { "setLanguage": 283, "setUnitOfTemperature": 284, "getTime": 285},
         "cmdRsp": null
