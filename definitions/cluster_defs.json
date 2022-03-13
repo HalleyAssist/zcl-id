@@ -37,6 +37,22 @@
         "cmd": { "setLanguage": 283, "setUnitOfTemperature": 284, "getTime": 285},
         "cmdRsp": null
     },
+    "heimanPM25Measurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"uint16"},
+            "minMeasuredValue":{"id":1,"type":"uint16"},
+            "maxMeasuredValue":{"id":2,"type":"uint16"},
+            "tolerance":{"id":3,"type":"uint16"}},
+        "cmd":null,
+        "cmdRsp":null},
+    "heimanFormaldehydeMeasurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"uint16"},
+            "minMeasuredValue":{"id":1,"type":"uint16"},
+            "maxMeasuredValue":{"id":2,"type":"uint16"},
+            "tolerance":{"id":3,"type":"uint16"}},
+        "cmd":null,
+        "cmdRsp":null},
     "genBasic": {
         "attrId":{
             "zclVersion":{"id":0,"type":"uint8"},

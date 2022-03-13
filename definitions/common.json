@@ -187,6 +187,8 @@
         "msSodiumMeasurement": 1065,
         "msPM25Measurement": 1066,
         "msFormaldehydeMeasurement": 1067,
+        "heimanPM25Measurement": 1066,
+        "heimanFormaldehydeMeasurement": 1067,
         "ssIasZone": 1280,
         "ssIasAce": 1281,
         "ssIasWd": 1282,
