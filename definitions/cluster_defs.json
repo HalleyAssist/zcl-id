@@ -53,6 +53,14 @@
             "tolerance":{"id":3,"type":"uint16"}},
         "cmd":null,
         "cmdRsp":null},
+    "develcoVOCMeasurement": {
+        "attrId":{
+            "measuredValue":{"id":0,"type":"uint16"},
+            "minMeasuredValue":{"id":1,"type":"uint16"},
+            "maxMeasuredValue":{"id":2,"type":"uint16"},
+            "resolution":{"id":3,"type":"uint16"}},
+        "cmd":null,
+        "cmdRsp":null},
     "genBasic": {
         "attrId":{
             "zclVersion":{"id":0,"type":"uint8"},

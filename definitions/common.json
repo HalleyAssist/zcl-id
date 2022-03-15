@@ -229,6 +229,7 @@
         "seKeyEstablishment": 2048,
         "zeaker": 2540,
         "develCoAcceleration": 64516,
+        "develcoVOCMeasurement": 64515,
         "heimanAirQuality": 64641,
         "telecommunicationsInformation": 2304,
         "telecommunicationsVoiceOverZigbee": 2308,
