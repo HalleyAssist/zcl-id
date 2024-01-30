@@ -18,7 +18,6 @@ Object.defineProperty(zclId, 'foundationId', _.assign({ value: new Enum(_common.
 Object.defineProperty(zclId, 'dataTypeId', _.assign({ value: new Enum(_common.dataType) }, propUnwritable));
 Object.defineProperty(zclId, 'statusId', _.assign({ value: new Enum(_common.status) }, propUnwritable));
 Object.defineProperty(zclId, 'otaStatusId', _.assign({ value: new Enum(_common.otaStatus) }, propUnwritable));
-Object.defineProperty(zclId, 'nwkStatusId', _.assign({ value: new Enum(_common.nwkStatus) }, propUnwritable));
 Object.defineProperty(zclId, 'clusterId', _.assign({ value: new Enum(_common.clusterId) }, propUnwritable));
 Object.defineProperty(zclId, 'deviceId', _.assign({ value: { HA: new Enum(_common.haDevId) } }, propUnwritable));
 Object.defineProperty(zclId, 'nwkDbType', _.assign({ value: new Enum(_common.nwkDbType) }, propUnwritable));
@@ -344,23 +343,6 @@ zclId.otaStatus = function (status) {
         status = statusNumber;
 
     statusItem = zclId.otaStatusId.get(status);
-
-    if (statusItem)
-        return { key: statusItem.key, value: statusItem.value };    // { key: 'DATA8', value: 8 }
-};
-
-zclId.nwkStatus = function (status) {
-    // status: String | Number
-    if (!isValidArgType(status))
-        throw new TypeError('status should be a number or a string.');
-
-    var statusNumber = parseInt(status),
-        statusItem;
-
-    if (!isNaN(statusNumber))
-        status = statusNumber;
-
-    statusItem = zclId.nwkStatusId.get(status);
 
     if (statusItem)
         return { key: statusItem.key, value: statusItem.value };    // { key: 'DATA8', value: 8 }
