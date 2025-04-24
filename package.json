@@ -35,7 +35,6 @@
   },
   "homepage": "https://github.com/zigbeer/zcl-id#readme",
   "dependencies": {
-    "busyman": "^0.3.0",
     "light-enum": "git+https://github.com/splitice/light-enum.git"
   },
   "devDependencies": {

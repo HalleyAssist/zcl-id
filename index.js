@@ -1,5 +1,4 @@
-var _ = require('busyman'),
-    Enum = require('light-enum');
+var Enum = require('light-enum');
 
 var _common = require('./definitions/common.json'),
     _clusterDefs = require('./definitions/cluster_defs.json'),
@@ -12,15 +11,15 @@ var zclId = {};
 /*************************************************************************************************/
 /*** Loading Enumerations                                                                      ***/
 /*************************************************************************************************/
-Object.defineProperty(zclId, '_common', _.assign({ value: _common }, propUnwritable));
-Object.defineProperty(zclId, 'profileId', _.assign({ value: new Enum(_common.profileId) }, propUnwritable));
-Object.defineProperty(zclId, 'foundationId', _.assign({ value: new Enum(_common.foundation) }, propUnwritable));
-Object.defineProperty(zclId, 'dataTypeId', _.assign({ value: new Enum(_common.dataType) }, propUnwritable));
-Object.defineProperty(zclId, 'statusId', _.assign({ value: new Enum(_common.status) }, propUnwritable));
-Object.defineProperty(zclId, 'otaStatusId', _.assign({ value: new Enum(_common.otaStatus) }, propUnwritable));
-Object.defineProperty(zclId, 'clusterId', _.assign({ value: new Enum(_common.clusterId) }, propUnwritable));
-Object.defineProperty(zclId, 'deviceId', _.assign({ value: { HA: new Enum(_common.haDevId) } }, propUnwritable));
-Object.defineProperty(zclId, 'nwkDbType', _.assign({ value: new Enum(_common.nwkDbType) }, propUnwritable));
+Object.defineProperty(zclId, '_common', Object.assign({ value: _common }, propUnwritable));
+Object.defineProperty(zclId, 'profileId', Object.assign({ value: new Enum(_common.profileId) }, propUnwritable));
+Object.defineProperty(zclId, 'foundationId', Object.assign({ value: new Enum(_common.foundation) }, propUnwritable));
+Object.defineProperty(zclId, 'dataTypeId', Object.assign({ value: new Enum(_common.dataType) }, propUnwritable));
+Object.defineProperty(zclId, 'statusId', Object.assign({ value: new Enum(_common.status) }, propUnwritable));
+Object.defineProperty(zclId, 'otaStatusId', Object.assign({ value: new Enum(_common.otaStatus) }, propUnwritable));
+Object.defineProperty(zclId, 'clusterId', Object.assign({ value: new Enum(_common.clusterId) }, propUnwritable));
+Object.defineProperty(zclId, 'deviceId', Object.assign({ value: { HA: new Enum(_common.haDevId) } }, propUnwritable));
+Object.defineProperty(zclId, 'nwkDbType', Object.assign({ value: new Enum(_common.nwkDbType) }, propUnwritable));
 
 function isValidArgType(param) {
     var isValid = true;
@@ -34,10 +33,15 @@ function isValidArgType(param) {
     return isValid;
 }
 
+function isNil(v){
+    return v === null || v === undefined;
+
+}
+
 /*************************************************************************************************/
 /*** zclId Methods                                                                             ***/
 /*************************************************************************************************/
-Object.defineProperty(zclId, '_getCluster', _.assign({
+Object.defineProperty(zclId, '_getCluster', Object.assign({
     value: function (cluster) {
         if (zclId[cluster]) {
             return zclId[cluster];
@@ -165,7 +169,7 @@ zclId.functional = function (cId, cmdId) {
     if (cItem)
         cInfo = zclId._getCluster(cItem.key);
 
-    if (cInfo && !_.isNil(cInfo.cmd))
+    if (cInfo && !isNil(cInfo.cmd))
         cmdItem = cInfo.cmd.get(cmdId);
 
     if (cmdItem)
@@ -197,7 +201,7 @@ zclId.getCmdRsp = function (cId, rspId) {    // TODO
     if (cItem)
         cInfo = zclId._getCluster(cItem.key);
 
-    if (cInfo && !_.isNil(cInfo.cmdRsp))
+    if (cInfo && !isNil(cInfo.cmdRsp))
         cmdItem = cInfo.cmdRsp.get(rspId);
 
     if (cmdItem)
@@ -252,7 +256,7 @@ zclId.attr = function (cId, attrId) {
     if (cItem)
         cInfo = zclId._getCluster(cItem.key);
 
-    if (cInfo && !_.isNil(cInfo.attr))
+    if (cInfo && !isNil(cInfo.attr))
         attrItem = cInfo.attr.get(attrId);
 
     if (attrItem)
@@ -288,7 +292,7 @@ zclId.attrType = function (cId, attrId) {
 
     attrName = zclId.attr(cId, attrId);
 
-    if (cInfo && !_.isNil(cInfo.attrType) && attrName) {
+    if (cInfo && !isNil(cInfo.attrType) && attrName) {
         attrItem = cInfo.attrType.get(attrName.key);
         attrType = zclId.dataType(attrItem.value);
     }
